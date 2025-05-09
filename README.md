@@ -30,6 +30,7 @@ For update and delete game apis, replace insert-game-id-here with the value of t
 
 #### Register User
 
+```
 curl --location 'http://localhost:8000/auth/register' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -37,9 +38,11 @@ curl --location 'http://localhost:8000/auth/register' \
 "email": "user@email.com",
 "password": "P@ssw0rd"
 }'
+```
 
 #### Login User
 
+```
 curl --location 'http://localhost:8000/auth/login' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -47,9 +50,11 @@ curl --location 'http://localhost:8000/auth/login' \
 "email": "user@email.com",
 "password": "P@ssw0rd"
 }'
+```
 
 #### Add Game
 
+```
 curl --location 'http://localhost:8000/game' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer your-token-here' \
@@ -60,9 +65,11 @@ curl --location 'http://localhost:8000/game' \
 "releaseYear": 2020,
 "description": "a first-person shooter game developed by Riot Games"
 }'
+```
 
 #### Update Game
 
+```
 curl --location --request PATCH 'http://localhost:8000/game/insert-game-id-here' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer your-token-here' \
@@ -73,18 +80,23 @@ curl --location --request PATCH 'http://localhost:8000/game/insert-game-id-here'
 "releaseYear": 2020,
 "description": "a first-person shooter game developed by Riot Games"
 }'
+```
 
 #### Delete Game
 
+```
 curl --location --request DELETE 'http://localhost:8000/game/insert-game-id-here' \
 --header 'Authorization: Bearer your-token-here' \
 --data ''
+```
 
 #### Get All Games
 
+```
 curl --location 'http://localhost:8000/game?title=Valo&releaseYear=2020' \
 --header 'Authorization: Bearer your-token-here' \
 --data ''
+```
 
 ### Third-Party Packages
 
